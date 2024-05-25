@@ -35,9 +35,10 @@ import pkg_resources
 
 from mtcnn.exceptions import InvalidImage
 from mtcnn.network.factory import NetworkFactory
+import tensorflow as tf
 
 __author__ = "Iván de Paz Centeno"
-
+sess = tf.compat.v1.Session(config=tf.compat.v1.ConfigProto(log_device_placement=True))
 
 class StageStatus(object):
     """
